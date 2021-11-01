@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const loginController = require("../controllers/loginController")
 const signupPController = require("../controllers/signupPController")
 const signupGController = require("../controllers/signupGController")
+const cldListController = require("../controllers/cldListController")
 
 
 
@@ -119,5 +120,8 @@ router.get("/createMessagesColection", (req, res) => {
 router.get("/login", new loginController().login);
 router.post("/signUpP", new signupPController().signUpP);
 router.post("/signUpG", new signupGController().signUpG);
+router.get("/cldListById", new cldListController().getCldList);
+
+
 module.exports = router;
 
