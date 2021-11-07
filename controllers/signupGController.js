@@ -10,10 +10,10 @@ class SignUpG {
         return jwt.sign({ username }, TOKEN_SECRET);
     };
     signUpG = (req, res) => {
-        console.log("hello");
+        //console.log("hello");
 
         res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-        console.log(req.body.email);
+        console.log(req.body);
         const { user, password} = req.body; 
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
