@@ -5,7 +5,7 @@ var url = "mongodb://localhost:27017/babyCareDB";
 class CldListById {
 
     getCldList = (req, res) => {
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
         const { email } = req.query;
         MongoClient.connect(url, async function (err, db) {
             if (err)

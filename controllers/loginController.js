@@ -11,7 +11,7 @@ class Login {
     };
 
     login = (req, res) => {
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
         const { user, password } = req.query;
         MongoClient.connect(url, async function (err, db) {
             if (err)
