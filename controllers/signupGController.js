@@ -4,11 +4,11 @@ const jwt = require("jsonwebtoken");
 var url = "mongodb://localhost:27017/babyCareDB";
 
 class SignUpG {
-    TOKEN_SECRET = "F9EACB0E0AB8102E999DF5E3808B215C028448E868333041026C481960EFC126";
+    // TOKEN_SECRET = "F9EACB0E0AB8102E999DF5E3808B215C028448E868333041026C481960EFC126";
 
-    generateAccessToken = (username) => {
-        return jwt.sign({ username }, TOKEN_SECRET);
-    };
+    // generateAccessToken = (username) => {
+    //     return jwt.sign({ username }, TOKEN_SECRET);
+    // };
     signUpG = (req, res) => {
         //console.log("hello");
 
@@ -23,9 +23,10 @@ class SignUpG {
                 if (err) throw err;
                 db.close();
             });
-            const token = generateAccessToken(user);
-            console.log("token", token);
-            return res.json({ token }).send();
+            // const token = generateAccessToken(user);
+            // console.log("token", token);
+            // return res.json({ token }).send();
+            return res.json({ }).send();
         });
     }
 }
